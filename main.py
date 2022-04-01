@@ -3,6 +3,7 @@ import math
 abeceda = ["a", "b", "c", "d", "o", "p", "q", "x", "y", "z"]
 
 
+# Binary search algorithm
 def hledej(cil, hodnoty, zacatek=0, konec=0):
     if konec == 0:
         konec = len(hodnoty)
@@ -13,10 +14,10 @@ def hledej(cil, hodnoty, zacatek=0, konec=0):
         return print(f"Index hledáného cíle je {stred}")
 
     if hodnoty[stred] > cil:
-        return hledej(cil, hodnoty, zacatek, stred-1)
+        return hledej(cil, hodnoty, zacatek, stred - 1)
 
     if hodnoty[stred] < cil:
-        return hledej(cil, hodnoty, stred+1, konec)
+        return hledej(cil, hodnoty, stred + 1, konec)
 
 
 if __name__ == "__main__":
